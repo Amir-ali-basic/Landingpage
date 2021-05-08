@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  pad: 0;
+  box-sizing: border-box;
+}
+
+main {
+  font-family: 'Heebo', sans-serif;
+}
+
+.landing {
+  min-height: 100vh;
+  background-image: url('./hero.jpg');
+  background-size: cover;
+  padding: 0rem 5 rem;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  min-height: 10vh;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  margin-left: 15%;
+  color: rgb(61, 61, 61);
+}
+
+.nav-links li {
+  padding-left: 7rem;
+  padding-right: 2rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.nav-links li:hover {
+  color: black;
+  transition: 0.5s ease-in;
+  text-decoration: underline;
+}
+
+#logo {
+  font-family: 'Lobster', cursive;
+  font-weight: lighter;
+  font-size: 2rem;
+  padding-left: 2rem;
+}
+
+.big-text {
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  transform: translate(-50%, -30%);
+  font-family: 'Lobster', cursive;
+  font-size: 4rem;
+  color: rgb(61, 61, 61);
+}
+
+button {
+  width: 18rem;
+  height: 5rem;
+  border: 0.2rem solid rgb(61, 61, 61);
+  background-color: rgb(61, 61, 61);
+  color: rgb(61, 61, 61);
+  cursor: pointer;
+  background-color: transparent;
+  font-family: 'Muli', serif;
+  font-size: 1.5rem;
+  text-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.4);
+  margin-top: 25%;
+  margin-left: 10%;
+}
+
+.scrolldown {
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  transform: translateY(-80px) translateX(-50%) rotate(45deg);
+}
+.scrolldown span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-bottom: 2px solid rgb(61, 61, 61);
+  border-right: 2px solid rgb(61, 61, 61);
+  animation: animate 1.5s linear infinite;
+  opacity: hidden;
+}
+
+.scrolldown span:nth-child(1) {
+  transform: translate(-15px, -15px);
+}
+
+.scrolldown span:nth-child(2) {
+  transform: translate(0px, 0px);
+}
+
+.scrolldown span:nth-child(3) {
+  transform: translate(15px, 15px);
+}
+
+@keyframes animate {
+  0% {
+    top: -5px;
+    left: -5px;
+    opacity: 0;
+  }
+  25% {
+    top: -5px;
+    left: -5px;
+    opacity: 1;
+  }
+  100% {
+    top: 5px;
+    left: 5px;
+  }
+}
+.intro {
+  background-color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* slider je boja koja je trenutno sakrivne i ne vidi se ali u js cu da je podginem */
+.slider {
+  background-color: rgb(110, 148, 165);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateY(100%);
+}
+
+.intro-text {
+  color: rgb(227, 242, 255);
+  font-family: 'Heebo', sans-serif;
+  font-size: 3rem;
+}
+
+.hide {
+  background-color: black;
+  overflow: hidden;
+}
+.hide span {
+  transform: translateY(100%);
+  display: inline-block;
+}
